@@ -41,6 +41,6 @@ urlpatterns = [
     path('save-comments/',views.saveComments,name='save_comments'),
     path('get-comments/',views.getComments,name='get_comments'),
     path('delete-comments/',views.delComment,name='del_comments'),
-
+    
 
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

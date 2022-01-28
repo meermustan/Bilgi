@@ -24,6 +24,18 @@ from django.views.generic import TemplateView
 urlpatterns = [
 
     path('',TemplateView.as_view(template_name='index.html')),
+    path('cetagory/',TemplateView.as_view(template_name='index.html')),
+    path('articles/',TemplateView.as_view(template_name='index.html')),
+    path('article/<str:id>/',TemplateView.as_view(template_name='index.html')),
+    path('search/<str:content>',TemplateView.as_view(template_name='index.html')),
+    path('account/',TemplateView.as_view(template_name='index.html')),
+    path('account-view/',TemplateView.as_view(template_name='index.html')),
+    path('account-view/saved-list/',TemplateView.as_view(template_name='index.html')),
+    path('account-view/view-history/',TemplateView.as_view(template_name='index.html')),
+    path('account-view/notifications/',TemplateView.as_view(template_name='index.html')),
+    path('account-view/contact/',TemplateView.as_view(template_name='index.html')),
+    path('account-view/about/',TemplateView.as_view(template_name='index.html')),
+    path('account-view/privicy-policy/',TemplateView.as_view(template_name='index.html')),
     path('admin/', admin.site.urls),
     path('api/', include('articles.urls')),
     path('tinymce/',include('tinymce.urls')),

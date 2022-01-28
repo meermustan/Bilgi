@@ -1,6 +1,3 @@
-from json.tool import main
-from operator import itemgetter
-from tkinter.tix import Tree
 from rest_framework import serializers
 from .serializers import ArticleSerializer, CommentSerializer,ContactSerializer
 from .models import Articles,ViewArticleHistory,SavedArticles
@@ -21,8 +18,20 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 @api_view(['GET'])
 def apiOverview(request):
     api_urls={
-        'All Articles':'/aritcles-list/',
-        'Article':'/article/<str:pk>/',
+        'All_Articles':'aritcles-list/',
+        'One_Article':'article/<str:id>/',
+        'Articles_With_Cetgory':'articles-list/cetagory/',
+        'User_Login_Token':'token/',
+        'Refresh_User_Token':'token/refresh/',
+        'Create_User':'create-user/',
+        'Search':'search/<str:query>/',
+        'Save_Viewed_Articles_Or_As_History_(Login_Required)':'saveArticlesOrHistory/',
+        'Get_Saved_Articles_Or_History_(Login_Required)':'getSavedArticlesOrHistory/',
+        'Contact_(Login_Required)':'contact/',
+        'Notification_(Login_Required)':'notification/',
+        'Save_Comments_(Login_Required)':'save-comments/',
+        'Get_Comments':'get-comments/',
+        'Delete_Comments_(Login_Required)':'delete-comments/'
     }
     return Response(api_urls)
 
