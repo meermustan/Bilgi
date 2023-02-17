@@ -29,7 +29,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bilgi-blog.herokuapp.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['bilgi-blog.herokuapp.com','localhost','127.0.0.1','bilgi-blog.up.railway.app','www.bilgi-blog.up.railway.app']
 
 
 # Application definition
